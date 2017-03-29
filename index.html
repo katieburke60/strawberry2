@@ -9,15 +9,16 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+  <script src="js/model/bill.js"></script>
+  <script src="js/wrappers/api.js"></script>
   <script src="app.js"></script>
-  <script src="controllers/createBill.js"></script>
 </head>
 
 <body>
   <form id="queryForm" action="#">
     <div>
-      <label for="firstQuery">Query</label>
-      <input type="text" id="firstQuery" name="firstQuery">
+      <label for="query">Query</label>
+      <input type="text" id="query" name="query">
     </div>
     <div>
       <label for="state">State</label>
@@ -25,12 +26,15 @@
     </div>
     <input type="submit" value="Search">
   </form>
-
-  <div id="billBasicInfo">
-    <ul>
-
-    </ul>
-  </div>
+  <div class = "container">
+    <div class="row">
+      <aside class="col-xs-4">
+        <ul class="billQuery">
+        </ul>
+      </aside>
+      <section class="col-xs-8 billDetails">
+      </section>
+    </div>
 
   <!-- <form id="detailedQuery" action="#">
     <div>
