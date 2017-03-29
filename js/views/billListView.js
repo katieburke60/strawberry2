@@ -1,6 +1,9 @@
 class BillListView {
     static renderBillListItems($target, result){
-      let billListItems = result.map(this.listItemTemplate)
+      debugger
+      let billListItems = result.map(function(bill) {
+        listItemTemplate
+      })
       $target.append(billListItems)
     }
 
