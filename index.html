@@ -4,24 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My page</title>
+  <title>Main search page</title>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+  <script src="js/model/bill.js"></script>
+  <script src="js/views/billListView.js"></script>
+  <script src="js/wrappers/api.js"></script>
+  <script src="js/views/billListView.js"></script>
+  <script src="js/controllers/billListController.js"></script>
   <script src="app.js"></script>
 </head>
+
 <body>
   <form id="queryForm" action="#">
     <div>
       <label for="query">Query</label>
-      <input type="text" id="query">
+      <input type="text" id="query" name="query">
     </div>
     <div>
       <label for="state">State</label>
-      <input type="text" id="state">
+      <input type="text" id="state" name="state">
     </div>
     <input type="submit" value="Search">
   </form>
+  <div class = "container">
+    <div class="row">
+      <aside class="col-xs-4">
+        <ul class="billQuery">
+        </ul>
+      </aside>
+      <section class="col-xs-8 billDetails">
+      </section>
+    </div>
+
+  <!-- <form id="detailedQuery" action="#">
+    <div>
+      <button type="button" class="more_details">More Details</button>
+    </div>
+  </form> -->
+
 </body>
 </html>
