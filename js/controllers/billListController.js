@@ -1,13 +1,14 @@
 //Where will you render? What will you render
-
-class BillDetailsController {
-  constructor ($target, bills) {
+class BillListController {
+  constructor ($target, bills, detailController) {
     this.$target = $target
     this.bills = bills
+    this.detailController = detailController
     this.render()
   }
 
   render() {
-    this.$target.append("<li>beef</li>")
+    BillListView.renderBillListItems(this.$target, this.bills)
   }
+
 }

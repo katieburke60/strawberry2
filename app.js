@@ -13,9 +13,10 @@ $(() => {
         var research_url = result[element].research_url
         var last_action = result[element].last_action
         }
+        let $target = $('ul.billQuery')
+        let billListController = new BillListController($target, result)
     // $(this).find('input#firstQuery').val('')
     // $(this).find('input#state').val('')
-    //want to have ready for the next search query?
   })
 })
 })
