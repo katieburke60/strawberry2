@@ -9,7 +9,7 @@ let Bill = (function createBill () {
   var id = 0
   //way to make private variables in JS
   //is the only reason we're doing this for the id? otherwise what would we do?
-  class {
+  return class {
     constructor(title, number) {
       this.id = id++
       this.title = title
@@ -27,7 +27,7 @@ let Bill = (function createBill () {
 }())
 
 let Comment = (function createComment () {
-   class {
+   return class {
     constructor(content, bill_id) {
       this.content = content
       this.bill_id = bill_id

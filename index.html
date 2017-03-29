@@ -9,32 +9,34 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-  <script src="/app.js"></script>
-  <script src="controllers/bill.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/createBill.js"></script>
 </head>
 
 <body>
   <form id="queryForm" action="#">
     <div>
-      <label for="query">Query</label>
-      <input type="text" id="query">
+      <label for="firstQuery">Query</label>
+      <input type="text" id="firstQuery" name="firstQuery">
     </div>
     <div>
       <label for="state">State</label>
-      <input type="text" id="state">
+      <input type="text" id="state" name="state">
     </div>
     <input type="submit" value="Search">
   </form>
 
   <div id="billBasicInfo">
-    
+    <ul>
+
+    </ul>
   </div>
 
-  <form id="detailedQuery" action="#">
+  <!-- <form id="detailedQuery" action="#">
     <div>
       <button type="button" class="more_details">More Details</button>
     </div>
-  </form>
+  </form> -->
 
 </body>
 </html>
