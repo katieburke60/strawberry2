@@ -12,12 +12,15 @@ class BillListController {
     BillListView.renderBillListItems(this.$target, this.bills)
   }
 
-  attachListeners(){
+  attachListeners() {
     this.$target.on('click', 'li.billQuery', (e) => {
       e.preventDefault()
-      let bill = e.target.firstChild
+      let id = $(e.currentTarget).data('id')
+      Bill.find(id)
+      .then((bill) => {
       debugger
       this.detailController.setCurrent()
     })
-  }
+  })
+}
 }
