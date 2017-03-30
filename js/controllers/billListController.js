@@ -15,6 +15,7 @@ class BillListController {
   attachListeners(){
     this.$target.on('click', 'li.billQuery', (e) => {
       e.preventDefault()
+      let bill = e.target.firstChild
       debugger
       this.detailController.setCurrent()
     })
