@@ -6,7 +6,7 @@ class BillView {
 
   static detailTemplate(bill) {
     return `
-    <h1>${bill.bill.title}<h1>
+    <h1>${bill.title}<h1>
     <ul>
     <li>
     </li>
