@@ -1,9 +1,9 @@
 class BillShowController {
-  constructor($target) {
-    this.$target = $target
+  constructor($detailTarget) {
+    this.$detailTarget = $detailTarget
   }
 
-  setCurrent(){
-    this.$target.html("<h1>BEEEEEF</h1>")
+  setCurrent(bill){
+    BillView.renderDetails(this.$detailTarget, bill)
   }
 }
