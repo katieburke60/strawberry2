@@ -4,6 +4,7 @@ class BillListController {
     this.$target = $target
     this.bills = bills
     this.detailController = detailController
+    this.attachListeners()
     this.render()
   }
 
@@ -11,4 +12,11 @@ class BillListController {
     BillListView.renderBillListItems(this.$target, this.bills)
   }
 
+  attachListeners(){
+    this.$target.on('click', 'li.billQuery', (e) => {
+      e.preventDefault()
+      debugger
+      this.detailController.setCurrent()
+    })
+  }
 }

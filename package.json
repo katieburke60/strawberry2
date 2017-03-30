@@ -1,0 +1,23 @@
+{
+  "name": "strawberry2",
+  "version": "1.0.0",
+  "description": "making bills",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krb3p/strawberry2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krb3p/strawberry2/issues"
+  },
+  "homepage": "https://github.com/krb3p/strawberry2#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}

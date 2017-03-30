@@ -9,7 +9,11 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="js/controllers/billListController.js"></script>
+  <script src="js/controllers/billDetailsController.js"></script>
   <script src="js/model/bill.js"></script>
   <script src="js/views/billListView.js"></script>
   <script src="js/wrappers/api.js"></script>
@@ -17,26 +21,31 @@
 </head>
 
 <body>
-  <form id="queryForm" action="#">
-    <div>
-      <label for="query">Query</label>
-      <input type="text" id="query" name="query">
-    </div>
-    <div>
-      <label for="state">State</label>
-      <input type="text" id="state" name="state">
-    </div>
-    <input type="submit" value="Search">
-  </form>
-  <div class = "container">
+    <div class = "container">
+      <div class="row">
+        <form id="queryForm" action="#">
+          <div>
+            <label for="query">Query</label>
+            <input type="text" id="query" name="query">
+          </div>
+          <div>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state">
+          </div>
+          <input type="submit" value="Search">
+        </form>
+      </div>
     <div class="row">
       <aside class="col-xs-4">
         <ul class="billQuery">
         </ul>
       </aside>
-      <section class="col-xs-8 billDetails">
+      <section class="col-xs-8">
+        <ul class="billDetails">
+        </ul>
       </section>
     </div>
+  </div>
 
   <!-- <form id="detailedQuery" action="#">
     <div>
