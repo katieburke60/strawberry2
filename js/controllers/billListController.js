@@ -18,8 +18,7 @@ class BillListController {
       let id = $(e.currentTarget).data('id')
       Bill.find(id)
       .then((bill) => {
-      debugger
-      this.detailController.setCurrent()
+      this.detailController.setCurrent(bill)
     })
   })
 }

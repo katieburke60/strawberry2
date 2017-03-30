@@ -12,7 +12,7 @@ $(() => {
     }).then((results) => {
       let $target = $('ul.billQuery')
       let $detailTarget = $('ul.billDetails')
-      let detailController = new BillDetailsController($detailTarget)
+      let detailController = new BillShowController($detailTarget)
       let listController = new BillListController($target, results, detailController)
       // bill.bill_id === e.currentTarget.dataset.id
       //currentTarget = li.billQuery
