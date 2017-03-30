@@ -1,5 +1,3 @@
-
-
 $(() => {
   $('#queryForm').on('submit', function(event){
     event.preventDefault()
@@ -8,14 +6,14 @@ $(() => {
     Bill.all(query, state)
     .then(function({searchresult}) {
       delete searchresult.summary
-      return Object.values(searchresult)
-    }).then((results) => {
+      let summaryResults = Object.values(searchresult)
+      return summaryResults
+      // new BillSummarty (klh, fdfhk, )  --> put into a store (constructor)
+    }).then((summaryResults) => {
       let $target = $('ul.billQuery')
       let $detailTarget = $('ul.billDetails')
       let detailController = new BillShowController($detailTarget)
-      let listController = new BillListController($target, results, detailController)
-      // bill.bill_id === e.currentTarget.dataset.id
-      //currentTarget = li.billQuery
+      let listController = new BillListController($target, summaryResults, detailController)
   })
 })
 })

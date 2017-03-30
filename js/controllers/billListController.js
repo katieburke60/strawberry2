@@ -1,15 +1,23 @@
-//Where will you render? What will you render
 class BillListController {
   constructor ($target, bills, detailController) {
     this.$target = $target
     this.bills = bills
     this.detailController = detailController
-    this.attachListeners()
+    this.billSummaryArray()
     this.render()
+    this.attachListeners()
   }
 
   render() {
-    BillListView.renderBillListItems(this.$target, this.bills)
+    BillListView.renderBillListItems(this.$target, store)
+  }
+  //$target = place in HTML where information is going
+  //bills = the array of bills
+  billSummaryArray() {
+    this.bills.forEach((bill) => {
+      new BillSummary(bill.bill_number, bill.bill_id, bill.relevance, bill.title,
+                            bill.last_action, bill.last_action_date, bill.state)
+    })
   }
 
   attachListeners() {
