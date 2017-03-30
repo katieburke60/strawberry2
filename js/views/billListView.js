@@ -5,7 +5,7 @@ class BillListView {
     }
 
     static listItemTemplate(bill){
-      return `<li class = "billQuery">
+      return `<li class = "billQuery" data-id="${bill.bill_id}">
       <a href="#">${bill.bill_id}</a>
       <p> ${bill.bill_number}: ${bill.title}</p>
       </div>

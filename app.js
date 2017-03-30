@@ -14,10 +14,8 @@ $(() => {
       let $detailTarget = $('ul.billDetails')
       let detailController = new BillDetailsController($detailTarget)
       let listController = new BillListController($target, results, detailController)
-
-    // $(this).find('input#firstQuery').val('')
-    // $(this).find('input#state').val('')
-    //want to have ready for the next search query?
+      // bill.bill_id === e.currentTarget.dataset.id
+      //currentTarget = li.billQuery
   })
 })
 })
