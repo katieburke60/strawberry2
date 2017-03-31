@@ -5,10 +5,33 @@ class BillView {
   }
 
   static detailTemplate(bill) {
+    // debugger
     return `
-    <h2>${bill.title}<h2>
-    <h5><em>${bill.description}<em><h5>
+    <h3>${bill.bill_number}</h3>
+    <p>${bill.description}</p>
+    <p><b>Committee:</b> ${bill.committee.name} </p>
+    <a herf="${bill.url}"> Link to ${bill.bill_number} Text</a>
+    <br>
+    <a herf="${bill.state_link}"> Link to Legiscan Research </a>
+    <br>
+    <ul class="sponsors">
+    ${this.sponsors(bill)}
+    </ul>
     `
+  }
+
+  static sponsors(bill){
+    return bill.sponsors.map(sponsor=>{
+      return `
+      <br>
+      <li>Sponsor Name: ${sponsor.name}
+        <ul>
+          <li>District: ${sponsor.district}</li>
+          <li>Party: ${sponsor.party}</li>
+        </ul>
+      </li>
+      `
+    })
   }
 
 }
