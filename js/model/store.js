@@ -1,6 +1,8 @@
 class Store {
   constructor() {
     this.state = {}
+    this.summary = []
+    this.bills = []
   }
 
   add(resource, object){
