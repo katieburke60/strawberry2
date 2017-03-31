@@ -1,15 +1,16 @@
 class BillListView {
     static renderBillListItems($target, result){
-      let billListItems = result.map(this.listItemTemplate)
+      let bill_list = Object.values(result)[0]
+      let billListItems = bill_list.map(this.listItemTemplate)
       $target.append(billListItems)
     }
 
     static listItemTemplate(bill){
-      return `<li class = "billQuery" data-id="${store.summaries[0].id}">
-      <a href="#">#</a>
-      <p> #</p>
-
-      </div>
+      return `<li class = "billQuery" data-id="${bill.id}">
+      <a href="#">
+        <h3>${bill.number}</h3>
+        <p>${bill.title}</p>
+      </a>
       </li>
       `
     }

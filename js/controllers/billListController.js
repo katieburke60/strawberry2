@@ -15,8 +15,8 @@ class BillListController {
   //bills = the array of bills
   billSummaryArray() {
     this.bills.forEach((bill) => {
-      new BillSummary(bill.bill_number, bill.bill_id, bill.relevance, bill.title,
-                            bill.last_action, bill.last_action_date, bill.state)
+      store.summaries.push(new BillSummary(bill.bill_number, bill.bill_id, bill.relevance, bill.title,
+                            bill.last_action, bill.last_action_date, bill.state))
     })
   }
 
