@@ -6,11 +6,14 @@ class BillListView {
     }
 
     static listItemTemplate(bill){
+      // debugger
       return `<li class = "billQuery" data-id="${bill.id}">
       <a href="#">
-        <h5>${bill.number}</h5>
+        <h4>${bill.number}</h4>
         </a>
-        <p>${bill.title.trunc(77)}</p>
+        <p><b>Summary:</b>  ${bill.title.trunc(77)}</p>
+        <p><b>Last Action:</b>  ${bill.last_action}</p>
+        <p><b>Last Date:</b>  ${bill.last_action_date}</p>
       </li>
       `
     }
