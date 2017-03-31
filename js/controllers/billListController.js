@@ -29,5 +29,7 @@ class BillListController {
       this.detailController.setCurrent(bill)
     })
   })
+
+
 }
 }

@@ -9,8 +9,8 @@ class BillListView {
       return `<li class = "billQuery" data-id="${bill.id}">
       <a href="#">
         <h3>${bill.number}</h3>
-        <p>${bill.title}</p>
-      </a>
+        </a>
+        <p>${bill.title.trunc(77)}</p>
       </li>
       `
     }
