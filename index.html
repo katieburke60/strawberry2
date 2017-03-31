@@ -19,24 +19,28 @@
   <script src="js/model/bill.js"></script>
   <script src="js/views/billListView.js"></script>
   <script src="js/wrappers/api.js"></script>
+  <script src="js/views/stateSelect.js"></script>
   <script src="app.js"></script>
 </head>
 
 <body>
     <div class = "container">
       <div class="row">
-        <form id="queryForm" action="#">
-          <div>
-            <label for="query">Query</label>
-            <input type="text" id="query" name="query">
+        <div class="col-xs-5" >
+          <form id="queryForm" action="#">
+            <div>
+              <label for="query">Query</label>
+              <input type="text" id="query" name="query">
+            </div>
+          <div class="form-group">
+            <label for="sel1">Select list:</label>
+            <select class="form-control" id="state">
+            </select>
           </div>
-          <div>
-            <label for="state">State</label>
-            <input type="text" id="state" name="state">
-          </div>
-          <input type="submit" value="Search">
-        </form>
+            <input type="submit" value="Search">
+          </form>
       </div>
+    </div>
     <div class="row">
       <aside class="col-xs-5">
         <ul class="billQuery">

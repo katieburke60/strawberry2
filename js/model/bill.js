@@ -8,7 +8,6 @@ class Bill {
   }
 
   static search(id){
-    debugger
     if (store.look("bills", id)){
       return new Promise ((resolve) => {
         resolve(store.look("bills", id))
