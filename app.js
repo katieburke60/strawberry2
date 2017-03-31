@@ -2,6 +2,10 @@ $(() => {
   loadStates()
   $('#queryForm').on('submit', function(event){
     event.preventDefault()
+    debugger
+    store.summaries.length=0
+    $('ul.billQuery').empty()
+    $('ul.billDetails').empty()
     let query = $(this).find('#query').val()
     let state = $(this).find('#state').val()
     Bill.all(query, state)
