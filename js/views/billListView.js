@@ -8,7 +8,7 @@ class BillListView {
     static listItemTemplate(bill){
       return `<li class = "billQuery" data-id="${bill.id}">
       <a href="#">
-        <h3>${bill.number}</h3>
+        <h5>${bill.number}</h5>
         </a>
         <p>${bill.title.trunc(77)}</p>
       </li>
