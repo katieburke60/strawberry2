@@ -24,7 +24,7 @@ class BillListController {
     this.$target.on('click', 'li.billQuery', (e) => {
       e.preventDefault()
       let id = $(e.currentTarget).data('id')
-      Bill.find(id)
+      Bill.search(id)
       .then((bill) => {
       this.detailController.setCurrent(bill)
     })

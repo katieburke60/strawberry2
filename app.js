@@ -1,4 +1,5 @@
 $(() => {
+  loadStates()
   $('#queryForm').on('submit', function(event){
     event.preventDefault()
     let query = $(this).find('#query').val()
