@@ -10,6 +10,7 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="js/controllers/billListController.js"></script>
@@ -25,26 +26,27 @@
 
 <body>
     <div class = "container">
-      <div class="row">
+      <div class="row row-padded">
         <div class="col-xs-12">
           <h1>Bill it to Me</h1>
         </div>
-        <div class = "row">
-          <div class="col-xs-3" >
-            <form id="queryForm" action="#">
-              <div>
-                <label for="query">Query</label>
-                <br />
-                <input type="text" id="query" name="query">
-              </div>
-            <div class="form-group">
-              <label for="sel1">Select list:</label>
-              <select class="form-control" id="state">
-              </select>
+      </div>
+        <div class="col-xs-3" >
+          <br>
+          <form id="queryForm" action="#">
+            <div>
+              <label for="query">Query</label>
+              <br />
+              <input type="text" id="query" name="query">
             </div>
-              <input type="submit" value="Search">
-            </form>
+          <div class="form-group">
+            <label for="sel1">Select list:</label>
+            <select class="form-control" id="state">
+            </select>
           </div>
+            <input type="submit" value="Search">
+          </form>
+          <br>
         </div>
       </div>
     <div class="row">
