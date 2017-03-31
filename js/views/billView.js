@@ -10,9 +10,9 @@ class BillView {
     <h3>${bill.bill_number}</h3>
     <p>${bill.description}</p>
     <p><b>Committee:</b> ${bill.committee.name} </p>
-    <a herf="${bill.url}"> Link to ${bill.bill_number} Text</a>
+    <a href=${bill.url}> Link to ${bill.bill_number} Text</a>
     <br>
-    <a herf="${bill.state_link}"> Link to Legiscan Research </a>
+    <a href=${bill.state_link}> Link to Legiscan Research </a>
     <br>
     <ul class="sponsors">
     ${this.sponsors(bill)}
