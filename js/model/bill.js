@@ -1,6 +1,6 @@
-let store = {summaries: [], bills: []}
+
 //store will clear each time
-let detail_store = new Store() // allows Store instance methods to be called anywhere
+let store = new Store() // allows Store instance methods to be called anywhere
 
 class BillSummary {
   constructor (number, id, relevance, title, last_action, last_action_date,
@@ -34,14 +34,14 @@ class Bill {
   }
 
   static search(id){
-    if (detail_store.look("bills", id)){
+    if (store.look("bills", id)){
       return new Promise ((resolve) => {
-        resolve(detail_store.look("bills", id))
+        resolve(store.look("bills", id))
       })
     }else{
       return Api.getBill(id)
       .then((bill) => {
-        detail_store.add("bills", bill.bill)
+        store.add("bills", bill.bill)
         return bill.bill
       })
     }

@@ -1,6 +1,6 @@
 class BillListView {
     static renderBillListItems($target, result){
-      let bill_list = Object.values(result)[0]
+      let bill_list = result.summaries
       let billListItems = bill_list.map(this.listItemTemplate)
       $target.append(billListItems)
     }

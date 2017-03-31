@@ -1,7 +1,7 @@
 class Store {
   constructor() {
     this.state = {}
-    this.summary = []
+    this.summaries = []
     this.bills = []
   }
 
