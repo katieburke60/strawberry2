@@ -4,7 +4,6 @@ $(() => {
     event.preventDefault()
     let query = $(this).find('#query').val()
     let state = $(this).find('#state').val()
-
     Bill.all(query, state)
     .then(function({searchresult}) {
       delete searchresult.summary
